@@ -3,20 +3,16 @@
 ifconfig eth0 10.0.2.15 netmask 255.255.255.0 up
 route add default gw 10.0.2.2 dev eth0
 
-qemud=`getprop ro.kernel.android.qemud`
-case "$qemud" in
-    "")
+qemud=`getprop.ro.kernel.android.qemud`
+if test -z "$qemud"; then
     radio_ril=`getprop ro.kernel.android.ril`
-    case "$radio_ril" in
-        "")
+    if test -z "$radio_ril"; then
         # no need for the radio interface daemon
         # telephony is entirely emulated in Java
         setprop ro.radio.noril yes
         stop ril-daemon
-        ;;
-    esac
-    ;;
-esac
+    fi
+fi
 
 num_dns=`getprop ro.kernel.android.ndns`
 case "$num_dns" in

@@ -1,4 +1,4 @@
-git clone -n git://github.com/sploutch/JetPlatform-Froyo.git
-cd JetPlatform-Froyo
+git clone -n "git://github.com/sploutch/Patch-for-JetPlatform.git"
+cd "Patch-for-JetPlatform"
 git checkout
 
