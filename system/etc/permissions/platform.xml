@@ -72,6 +72,15 @@
         <group gid="diag" />
     </permission>
 
+    <!-- Permissions to read DRM-protected theme resources. -->
+    <permission name="com.tmobile.permission.ACCESS_DRM_THEME" >
+        <group gid="theme_manager" />
+    </permission>
+
+    <permission name="android.permission.RAW_AUDIO" >
+        <group gid="audio" />
+    </permission>
+
     <!-- ================================================================== -->
     <!-- ================================================================== -->
     <!-- ================================================================== -->
@@ -90,8 +99,6 @@
     <assign-permission name="android.permission.CALL_PHONE" uid="shell" />
     <assign-permission name="android.permission.READ_CONTACTS" uid="shell" />
     <assign-permission name="android.permission.WRITE_CONTACTS" uid="shell" />
-    <assign-permission name="android.permission.READ_OWNER_DATA" uid="shell" />
-    <assign-permission name="android.permission.WRITE_OWNER_DATA" uid="shell" />
     <assign-permission name="android.permission.READ_CALENDAR" uid="shell" />
     <assign-permission name="android.permission.WRITE_CALENDAR" uid="shell" />
     <assign-permission name="android.permission.READ_USER_DICTIONARY" uid="shell" />
